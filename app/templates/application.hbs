@@ -3,6 +3,22 @@
 {{outlet}}
 
 {{! The following component displays Ember's default welcome message. }}
-<WelcomePage />
-<h1>Hello, World!</h1>
+<div class="container">
+  <header>
+    <h1>Welcome to My Ember App</h1>
+    <p>Hello, World! This is my first Ember.js project.</p>
+  </header>
+
+  <main>
+    <button {{on "click" this.showAlert}}>Click Me!</button>
+    {{#if this.showingMessage}}
+      <p>You clicked the button!</p>
+    {{/if}}
+  </main>
+
+  <footer>
+    <p>&copy; 2024 My Ember App</p>
+  </footer>
+</div>
+
 {{! Feel free to remove this! }}
